@@ -1,0 +1,17 @@
+- name: Installing nginx on debian machine
+  hosts: debian
+  tasks:
+    - name: Installing nginx package
+      become: true
+      apt:
+        name: nginx
+        state: latest
+
+    - name: Enabling and starting nginx service
+      become: true
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+  

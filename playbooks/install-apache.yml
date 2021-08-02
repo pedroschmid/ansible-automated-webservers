@@ -1,0 +1,17 @@
+- name: Installing apache on centOS machine
+  hosts: centos
+  tasks:
+    - name: Installing httpd package
+      become: true
+      yum:
+        name: httpd
+        state: latest
+
+    - name: Enabling and starting apache service
+      become: true
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+  

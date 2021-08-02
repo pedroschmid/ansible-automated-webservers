@@ -1,0 +1,9 @@
+[debian]
+machine1.dev
+
+[centos]
+machine2.dev
+
+[linux]
+machine1.dev
+machine2.dev
